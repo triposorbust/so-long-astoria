@@ -30,7 +30,7 @@
                                 WhitePixel([self dis], [self screen]))];
 
     XSetStandardProperties([self dis], [self win],
-                           "Forager", "F.",
+                           "So Long, Astoria!", "So Long!",
                            0L, NULL, 0, NULL);
 
     XSelectInput([self dis], [self win], StructureNotifyMask | ExposureMask);

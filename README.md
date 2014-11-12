@@ -20,6 +20,7 @@ vagrant@precise32:/vagrant$ ./solong
 
 Should begin running a small simulation!
 
+![Screenshot](/screenshot.png)
 
 ### Contents
 
