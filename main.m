@@ -9,6 +9,7 @@
 #import "src/Displayer.h"
 #import "src/BHTree.h"
 
+#define N_BODIES (100)
 char GLOBAL_RUN_FLAG = 0x01;
 
 void
@@ -83,14 +84,14 @@ main(int argc, char **argv)
   signal(SIGINT, &sigint_handler);
 
   Displayer *d = [[Displayer alloc] init];
-  Simulation *s = [[Simulation alloc] initWithCapacity:15];
+  Simulation *s = [[Simulation alloc] initWithCapacity:N_BODIES];
   [d setUp];
   [s setUp];
   
   if ([s respondsTo:@selector(renderOnDisplay:)])
     ;
 
-  [s seedN:15 X:150 Y:150 R:25];
+  [s seedN:N_BODIES X:150 Y:150 R:25];
 
   while (GLOBAL_RUN_FLAG) {
     [s step];
